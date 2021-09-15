@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-final-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/origen.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictoriaQuirelli/ProyectoFinalCoderhouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictoriaQuirelli/ProyectoFinalCoderhouse/issues"
+  },
+  "homepage": "https://github.com/VictoriaQuirelli/ProyectoFinalCoderhouse#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

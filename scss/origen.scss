@@ -2,24 +2,56 @@
 *{
     margin: 0px;
     padding:0px;
-}    
-.colorSec {
-    color: rgb(37, 80, 116);
-    font-family:'Spectral', serif;
-    font-size: 7 * 2px;
- }
-.fodnoUno {
-    color: rgb(244, 243, 242);
- }
+}
+/*COLORES*/
+$blanco-color: #f4f3f2;
+$azul-color: #255074;
+$marron-color: #8b6a62;
 
+
+.colorSec {
+    color:$azul-color;
+    font-family:'Spectral', serif;
+    font-size: 14px;
+ }
+.fondoUno {
+    color: $blanco-color;
+    width: 100%;
+}
+.sinPadding {
+    padding: 0px;
+}
+.menuHover:hover {
+    color:#a59592;
+}
+.textTopBar1{
+    color: $blanco-color;
+    font-family: 'Spectral', serif;
+    font-size: 14px;
+    padding-left: 5%;
+    padding-top: 1.5%;
+    margin: 0px;
+
+}
+.textTopBar2{
+    color: $blanco-color;
+    font-family: 'Spectral', serif;
+    font-size: 14px;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-left: 7%;
+    margin-left: 50%;
+    margin-bottom: 10%;   
+}    
 ul {
     list-style-type: none;
     text-decoration: none; 
-    color: rgb(139, 106, 98) ;
- }
+    color:$marron-color ;
+}
+
 a {
     text-decoration: none; 
-    color: rgb(139, 106, 98) ;
+    color: $marron-color ;
  }
 
 li {
@@ -27,9 +59,10 @@ li {
     font-size: 16px;  
     font-weight: bolder;    
  }
+
 .redes{
     height: 40px;
-    width: 30px + 10px;
+    width: 40px;
     display: inline;
     left: -230px;
     padding: 10px 10px;
@@ -37,42 +70,59 @@ li {
 .imgTemporada {
     height: 25%;
     width: 25%;
-    margin-right: 3%;
+    margin-right: 2.5%;
     margin-left: 5%;
     margin-top: 5%;
 
 }
+.imgCarrousel {
+    height: 60% ;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    margin-left: 5%;
+
+}
 /*CERÁMICAS/PIEZAS*/
-.fondo1 {
-    background-color: rgba(139, 106, 98, 0.349);
-    height: 60px;
-    padding-top: 0.5rem; }
+
+.topBar {
+    background-color: rgb(49, 47, 46);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 0px;
+}
   
   .ordenarX {
     font-family: 'Spectral', serif;
     font-size: 19px;
     font-weight: bolder;
-    color: #f4f3f2;
+    color: $azul-color;
     display: inline;
     margin-left: 520px;
     padding-left: 1rem;
-    padding-top: 2rem; }
+    padding-top: 2rem; 
+}
   
   .titulosPiezas {
     position: relative;
-    color: #f4f3f2;
+    color: $azul-color;
     font-family: 'Spectral', serif;
-    font-size: 35px;
+    font-size: 25px;
     display: inline;
     margin-left: 8.5%; }
   
   .item-text {
     padding: 0.5em;
-    color: #f4f3f2;
+    color: $blanco-color;
     font-family: 'Spectral', serif;
     font-size: 10px;
     margin-top: -6%;
-    line-height: -5%; }
+    line-height: -5%; 
+}
   
   .contenedor {
     display: grid;
@@ -97,9 +147,6 @@ li {
     width: 15rem;
     height: 15rem; }
   
-  :root {
-    --gradient: linear-gradient(to left top, #2c52bb 10%, #d1d8ff 90%) !important; }
-  
   .card {
     background: rgba(43, 111, 167, 0.623);
     border: 1px solid #8d7975;
@@ -111,41 +158,53 @@ li {
   .btn {
     border: 5px solid;
     border-image-slice: 1;
-    background: var(--gradient) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    border-image-source: var(--gradient) !important;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+    border-image-source: var(--gradient);
     text-decoration: none;
-    transition: all .4s ease; }
+    transition: all .4s ease;
+}
   
   .btn:hover, .btn:focus {
-    background: var(--gradient) !important;
-    -webkit-background-clip: none !important;
-    -webkit-text-fill-color: #f4f3f2 !important;
-    border: 5px solid #f4f3f2 !important;
+    background: var(--gradient);
+    -webkit-text-fill-color: $blanco-color; 
+    border: 5px solid $blanco-color; 
     box-shadow: #222 1px 0 10px;
-    text-decoration: underline; }
+    text-decoration: underline; 
+}
   
-
  /*INDEX*/
 .logo {
     height: 15%;
     width: 15%;
-    margin-right: 160px;
-    margin-left: 37%;
-    margin-top: 3%;
+    margin-right: 25%;
+    margin-left: 38%;
+    margin-top: -1%;
     margin-left: 510px;
     max-width: 100%;
 
 }
-.logoContact {
-    height: 15.5%;
-    width: 15.5%;
+.logoContact{
+
+	@extend .logo;
+
     margin-right: 160px;
     margin-left: 37%;
     margin-top: 3%;
     margin-left: 490px;
     max-width: 100%;
+
+	height: 15,5%;
+	width: 15.5%;
+	margin-left: 490px;
+}
+.subTitulo {
+    color: $azul-color;
+    font-family: 'Spectral', serif;
+    font-size: 20px;
+    margin-left: 43.5%;
+    padding-top: 1.5%;
+    font-style: italic;
 
 }
 .portada {
@@ -159,7 +218,7 @@ li {
 }
 .marquee {
     height: 40px;
-    width: 91%;
+    width: 90%;
 
     overflow: hidden;
     position: relative;
@@ -184,7 +243,7 @@ li {
   @keyframes marquee {
     0% { left: 0; }
     100% { left: -100%; }
-  }
+}
 /*<!-- flexbox -->*/
 .flexbox-padre{
     display: flex;
@@ -197,12 +256,27 @@ li {
     display: grid;
     text-decoration: none;
     grid-area: menu1;
-    grid-template-columns: 17% 17% 17% 17%;
-    margin-top: 5%;
+    grid-template-columns: 17% 17% 17% 17% 17%;
+    margin-top: 6%;
     margin-right: 8%;
     margin-bottom: 3%;
     padding-left: 12rem; 
-    justify-content: center;  
+    justify-content: center;
+    color: $marron-color;  
+}
+.menuIndex{
+
+	@extend .menu1;
+
+    display: grid;
+    text-decoration: none;
+    grid-area: menu1;
+    grid-template-columns: 17% 17% 17% 17% 17%;
+    
+    margin-right: 8%;
+    padding-left: 12rem; 
+    justify-content: center;
+    color: $marron-color;  
 }
 /*<!-- flexbox -->*/
 .galeria-flex{
@@ -212,7 +286,7 @@ li {
     margin-left: 2%;
 }
 .tituloTemporada{
-    color: rgb(244, 243, 242);
+    color: $blanco-color;
     margin-right: 5%;
     margin-left: 5%;
     margin-top: 40px;
@@ -220,30 +294,67 @@ li {
     font-size: 22px;
     letter-spacing: 3px;
     font-weight: normal;
-    background-color:rgb(37, 80, 116);
+    background-color:$azul-color;
 }
 .made{
-    color: rgb(37, 80, 116);
+    color: $azul-color;
     font-size: 20px;
     margin-top: 60px;
 }
 .footerFondo{
-    background-color: rgb(161, 133, 126);
+    background-color: $marron-color;
 }  
 
 /*PAGES GENERAL*/
+
 .titulosPages {
-    color: rgb(139, 106, 98);
+    color: $marron-color;
     font-family:'Spectral', serif;
     margin-left: 70px;
     margin-top: 30px;
  }
 
-
-
 /*BIOGRAFÍA/ABOUT*/
+
+.gridPadreUno{
+    display: grid;
+    grid-template-areas: 
+    "imguno titulo"
+    "imguno texto"
+    "imguno texto";
+    grid-template-columns: 50% 40%;
+    grid-template-rows: 25% 25%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.gridHijoUno{
+    grid-area: imguno;
+    height: 100%;
+    width: 55%;
+    margin-left: 25%;
+    padding-top: 9%;
+
+} 
+.gridHijoDos{
+    grid-area: titulo;
+    padding-top: 9%;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    font-size: 20px;
+} 
+.gridHijoTres{
+    grid-area: texto;
+    font-size: 1em;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    font-size: 20px;
+
+}   
+
+
 .textosAbout{
-    color: rgb(43, 111, 167);
+    color: $azul-color;
     font-family:'Spectral', serif;
     font-size: 20px;
     text-align: left;
@@ -252,27 +363,37 @@ li {
     margin-left: 600px;
     vertical-align: text-top;
  }
-.footer2 {
-    background-color:rgb(141, 121, 117) ;
-    margin-top: 350px;
-    height: 55px;    
-}
+ .tituloBio {
+    position: relative;
+    color: $azul-color;
+    font-family: 'Spectral', serif;
+    font-size: 25px;
+    display: inline;
+    margin-left: 40.5%; }
+
+
 .imgAbout{
-    margin-left: 7%;
-    height: 20%;
-    width: 40%;
+    margin-left: 9%;
+    height: 15%;
+    width: 25%;
+}
+.backgroundAbout{
+    background-color: rgba(66, 47, 29, 0.315);
+    margin-left: 9%;
+    height: 9%;
+    width: 80%;
 }
 .text-bio {
     flex: 1;
     padding: 10px;
-    color: rgb(43, 111, 167);
+    color: $azul-color;
     font-family:'Spectral', serif;
     font-size: 20px;
     text-align: left;
-    width: 40%;
-    height: 50%;
+    width: 50%;
+    height: 15%;
     margin-top: 3%;
-    margin-left: 600px;
+    margin-left: 40%;
     vertical-align: text-top;
 }
 /*CONTACTO*/
@@ -312,7 +433,7 @@ li {
     border: none;
     border-radius: 1rem;
     padding: 1.5%;
-    background: rgb(43, 111, 167);
+    background: $azul-color;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
@@ -328,7 +449,7 @@ li {
     cursor: pointer;
 }
 .footerAbout{
-    margin-top: 25rem;
+    margin-top: 15rem;
 } 
 
 

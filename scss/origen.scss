@@ -27,6 +27,10 @@ $marron-color: #8b6a62;
 .textTopBar1{
     color: $blanco-color;
     font-family: 'Spectral', serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: pre;
     font-size: 14px;
     padding-left: 5%;
     padding-top: 1.5%;
@@ -36,6 +40,7 @@ $marron-color: #8b6a62;
 .textTopBar2{
     color: $blanco-color;
     font-family: 'Spectral', serif;
+    white-space: pre;
     font-size: 14px;
     padding-right: 5%;
     padding-top: 1.5%;
@@ -85,18 +90,34 @@ li {
 }
 /*CERÁMICAS/PIEZAS*/
 
+.navbarr {
+    margin: 0px 0px 0px !important;
+ }
 .topBar {
-    background-color: rgb(49, 47, 46);
+    background-color: rgb(49, 47, 46)!important;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 50px;
     width: 100%;
     margin-bottom: 5%;
-    padding: 0px;
+    padding: 0px; 
+    position: fixed;
+    z-index: 1;
 }
-  
-  .ordenarX {
+.logoPiezas{
+
+	@extend .logo;
+
+    margin-right: 160px;
+    margin-left: 21% !important;
+    max-width: 100%;
+    margin-top: 6% !important;
+	height: 14.9% !important;
+	width: 14.9% !important;
+	
+}
+    .ordenarX {
     font-family: 'Spectral', serif;
     font-size: 19px;
     font-weight: bolder;
@@ -114,96 +135,102 @@ li {
     font-size: 25px;
     display: inline;
     margin-left: 8.5%; }
-  
-  .item-text {
-    padding: 0.5em;
-    color: $blanco-color;
-    font-family: 'Spectral', serif;
-    font-size: 10px;
-    margin-top: -6%;
-    line-height: -5%; 
-}
-  
-  .contenedor {
-    display: grid;
-    grid-area: contenedor;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
-    width: 90%;
-    max-width: 1200px;
-    margin-top: 4rem;
-    margin-left: 120px;
-    gap: 3rem; }
-  
-  .item {
-    width: 15rem;
-    height: 20rem;
-    background-color: rgba(37, 80, 116, 0.521);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr); }
-  
-  .img {
-    width: 15rem;
-    height: 15rem; }
-  
-  .card {
-    background: rgba(43, 111, 167, 0.623);
-    border: 1px solid #8d7975;
-    color: rgba(250, 250, 250, 0.8);
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    margin-left: 2rem; }
-  
-  .btn {
-    border: 5px solid;
-    border-image-slice: 1;
-    background: var(--gradient);
-    -webkit-text-fill-color: transparent;
-    border-image-source: var(--gradient);
-    text-decoration: none;
-    transition: all .4s ease;
-}
-  
-  .btn:hover, .btn:focus {
-    background: var(--gradient);
-    -webkit-text-fill-color: $blanco-color; 
-    border: 5px solid $blanco-color; 
-    box-shadow: #222 1px 0 10px;
-    text-decoration: underline; 
-}
-  
+   
+    .banner {
+        height: 15% !important;
+        width: 100% !important;
+        margin-bottom: 5%; 
+        margin-top: 3%;
+    }
+    .menuPiezas{
+
+        @extend .menu1;
+    
+        display: grid !important;
+        text-decoration: none;
+        grid-area: menu1 !important;
+        grid-template-columns: 18% 18% 18% 18% 18% !important;
+        
+        margin-right: 5% !important;
+        margin-left: 4% !important;
+        justify-content: center !important;
+        color: $marron-color;  
+    }
+
+.card {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    background-size: cover;
+    color: white;
+    position: relative;
+    border-radius: 5px;  
+  }
+  .cardMargen {
+    margin: 3%;
+  }  
+  .card-user {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .card-category {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+  }
+  .card-description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  .card-description h2 {
+    font-size: 22px;
+  }
+  .card-description p {
+    font-size: 15px;
+  }
+  .card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index:2;
+    background: black;
+    opacity: 0;
+  }
+  .card-link:hover{
+    opacity: 0.1;
+  }
+  .features img {
+    width: 100px;
+  }
+  .features h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .features p {
+    font-size: 15px;
+    font-weight: lighter;
+  }
  /*INDEX*/
 .logo {
     height: 15%;
     width: 15%;
     margin-right: 25%;
     margin-left: 38%;
-    margin-top: -1%;
+    margin-top: 6%;
     margin-left: 510px;
     max-width: 100%;
-
 }
 .logoContact{
 
 	@extend .logo;
-
     margin-right: 160px;
     margin-left: 37%;
     max-width: 100%;
-
 	height: 15,5%;
 	width: 15.5%;
 	margin-left: 490px;
-}
-.subTitulo {
-    color: $azul-color;
-    font-family: 'Spectral', serif;
-    font-size: 20px;
-    margin-left: 43.5%;
-    padding-top: 1.5%;
-    font-style: italic;
-
 }
 .portada {
     display: flex;
@@ -325,6 +352,8 @@ li {
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
+    padding-bottom: 4%;
+    background-color: #8b6a6211;
 }
 .gridHijoUno{
     grid-area: imguno;
@@ -349,8 +378,6 @@ li {
     font-size: 20px;
 
 }   
-
-
 .textosAbout{
     color: $azul-color;
     font-family:'Spectral', serif;
@@ -399,7 +426,7 @@ li {
 .contact-form{
     background: -webkit-linear-gradient(top, #bd9887, #ffffff);;
     margin-top: 10%;
-    margin-bottom: %;
+    margin-bottom: 5%;
     width: 70%;
 }
 .contact-form .form-control{
@@ -450,11 +477,515 @@ li {
     margin-top: 15rem;
 } 
 
+ /*CURSOS*/
+
+.gridPadreDos{
+    display: grid;
+    grid-template-areas: 
+    "imguno titulo"
+    "imguno texto"
+    "imguno texto";
+    grid-template-columns: 50% 40%;
+    grid-template-rows: 25% 25%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-bottom: 4%;
+    background-color: #8b6a6211;
+}
+.gridHijo1{
+    grid-area: imguno;
+    height: 100%;
+    width: 55%;
+    margin-left: 25%;
+    padding-top: 9%;
+
+} 
+.gridHijo2{
+    grid-area: titulo;
+    padding-top: 9%;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    font-size: 20px;
+} 
+.gridHijo3{
+    grid-area: texto;
+    font-size: 1em;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    margin-top: 0px;
+    font-size: 17px;
+
+}
+.gridPadreTres{
+    display: grid;
+    grid-template-areas: 
+    "imguno titulo"
+    "imguno texto"
+    "imguno texto";
+    grid-template-columns: 50% 40%;
+    grid-template-rows: 25% 25%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-bottom: 4%;
+    background-color: #8b6a6211;
+}
+.gridHijo4{
+    grid-area: imguno;
+    height: 100%;
+    width: 55%;
+    margin-left: 120%;
+    padding-top: 9%;
+
+} 
+.gridHijo5{
+    grid-area: titulo;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    float: right;
+    margin-left: -95%;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    font-size: 20px;
+} 
+.gridHijo6{
+    grid-area: texto;
+    font-size: 1em;
+    float: right;
+    margin-left: -8%;
+    margin-right: 30%;
+    color: $azul-color;
+    font-family:'Spectral', serif;
+    font-size: 17px;
+
+}
+.textoCursos{
+    font-family:'Spectral', serif ;
+    font-size: 18px;
+    color: $marron-color;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    text-align: center;
+    padding: 2%;
+
+}   
+ /*Media Queris*/
+
+ @media (min-width: 464px) and (max-width: 767px) {
+
+    .topBar {
+        background-color: rgb(49, 47, 46);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 0px;
+    }
+    .textTopBar1{
+        color: $blanco-color;
+        font-family: 'Spectral', serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        white-space: pre;
+        font-size: 12px;
+        padding-left: 9%;
+        padding-top: 2.5%;
+        margin: 0px;
+    
+    }
+    .textTopBar2{
+        color: $blanco-color;
+        font-family: 'Spectral', serif;
+        white-space: pre;
+        font-size: 12px;
+        padding-right: 9%;
+        padding-top: 2.5%;
+        padding-left: 0%;
+        margin-left: 2%;
+        margin-bottom: 10%;   
+    }        
+    .logo {
+        height: 25% !important;
+        width: 25% !important;
+        margin-right: 18% !important;
+        margin-left: 39% !important;
+        margin-top: 12% !important;
+        padding-top: 8%;
+    }
+    .logoPiezas {
+        height: 25% !important;
+        width: 25% !important;
+        margin-right: 18% !important;
+        margin-left: 21.3% !important;
+        margin-top: 12% !important;
+        
+    }
+    .menu1{
+        display: grid;
+        text-decoration: none;
+        grid-area: menu1;
+        grid-template-columns: 16% 16% 16% 16% 16%;
+        margin-top: 3%;
+        margin-right: 3%;
+        margin-bottom: 15% !important;
+        padding-left: 0%; 
+        justify-content: center;
+        font-size: 13px;
+        color: $marron-color;  
+    }
+    .banner {
+        display: none;
+    }
+ /*PIEZAS*/
+    .ordenarX {
+        font-family: 'Spectral', serif;
+        font-size: 15px;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: $azul-color;
+        margin-left: 5%;
+        padding-left: 1rem;
+        padding-top: 4rem;}
+      
+      .titulosPiezas {
+        position: relative;
+        color: $azul-color;
+        font-family: 'Spectral', serif;
+        font-weight: bold;
+        font-size: 20px;
+        display: inline;
+        margin-left: 5%; }
+    
+        
+    .card {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        background-size: cover !important;
+        color: white;
+        position: relative;
+        border-radius: 5px;
+        }
+
+    .cardMargenMovil {
+        padding-top: 3%;
+    }     
+    /*ABOUT*/
+    .gridPadreUno{
+        margin-bottom: 4%;
+        margin-left: 2%;
+        margin-right: 1%;
+        padding-bottom: 12%;
+    }
+    .gridHijoUno{
+        height: 100%;
+        width: 93%;
+        margin-left: 10%;
+        padding-top: 18%;
+    
+    } 
+    .gridHijoDos{
+        padding-top: 9%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 18px;
+        margin-left: 16%;
+        margin-right: 60%;
+        padding-top: 18%;
+    } 
+    .gridHijoTres{
+        font-size: 1em;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        margin-left: 16%;
+        font-size: 12px;   }
+    
+    
+    /*CURSOS*/
+    .gridPadreDos{
+        margin-bottom: 2%;
+        margin-left: 2%;
+        margin-right: 1%;
+        padding-bottom: 4%;
+        background-color: #8b6a6211;}
+    
+    .gridHijo1{
+        width: 11.875rem;
+        height: 20rem;
+        margin-left: 1%;
+        margin-top: 40%;} 
+
+    .gridHijo2{
+        padding-top: 9%;
+        padding-bottom: 9%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 16px;} 
+
+    .gridHijo3{
+        margin-right: 8%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 12px;}
 
 
+    .gridPadreTres{
+        margin-bottom: 2%;
+        margin-left: 2%;
+        margin-right: 1%;
+        padding-bottom: 4%;
+        background-color: #8b6a6211;}
+        
+    .gridHijo4{
+        width: 11.875rem;
+        height: 20rem;
+        margin-left: 110%;
+        margin-top: 38%;
+        float: left;}
+
+    .gridHijo5{
+        padding-top: 9%;
+        padding-bottom: 9%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 16px;} 
+
+    .gridHijo6{
+        float: right;
+        margin-left: -10%;
+        margin-right: 50%;
+        padding-top: 9%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 12px;}
+
+    .textoCursos{
+        font-family:'Spectral', serif ;
+        font-size: 15px;
+        color: $marron-color;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        text-align: center;
+        padding: 2%;}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .topBar {
+        background-color: rgb(49, 47, 46);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 50px;
+        width: 100%;
+        margin-bottom: 5%;
+        padding: 0px;
+    }
+    .textTopBar1{
+        color: $blanco-color;
+        font-family: 'Spectral', serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        white-space: pre;
+        font-size: 15px;
+        padding-left: 9%;
+        padding-top: 2.5%;
+        margin: 0px;
+    
+    }
+    .textTopBar2{
+        color: $blanco-color;
+        font-family: 'Spectral', serif;
+        white-space: pre;
+        font-size: 15px;
+        padding-right: 1%;
+        padding-top: 2.5%;
+        padding-left: 0%;
+        margin-left: 20%;
+        margin-bottom: 10%;   
+    }        
+    .logo {
+        height: 19% !important;
+        width: 19% !important;
+        margin-right: 18% !important;
+        margin-left: 39% !important;
+        margin-top: 8% !important;
+        padding-top: 8%;
+    }
+    .logoPiezas {
+        height: 23% !important;
+        width: 23% !important;
+        margin-right: 18% !important;
+        margin-left: 18% !important;
+        margin-top: 8% !important;
+        
+    }
+    .menu1{
+        display: grid;
+        text-decoration: none;
+        grid-area: menu1;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-top: 3%;
+        margin-left: 13%;
+        padding-left: 0%; 
+        justify-content: center;
+        font-size: 13px;
+        color: $marron-color;  
+    }
+    .menuIndex{
+        display: grid;
+        text-decoration: none;
+        grid-area: menu1;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-left: -16%;
+        font-size: 20px;
+        padding-left: 12rem; 
+        justify-content: center;
+        color: $marron-color;  
+    }
+    .banner {
+        width: 100%;
+    }
+ /*PIEZAS*/
+    .ordenarX {
+        font-family: 'Spectral', serif;
+        font-size: 15px;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: $azul-color;
+        margin-left: 5%;
+        padding-left: 1rem;
+        padding-top: 4rem;}
+      
+      .titulosPiezas {
+        position: relative;
+        color: $azul-color;
+        font-family: 'Spectral', serif;
+        font-weight: bold;
+        font-size: 20px;
+        display: inline;
+        margin-left: 5%; }
+    
+        
+    .card {
+        text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        background-size: cover !important;
+        color: white;
+        position: relative;
+        border-radius: 5px;
+        }
+   
+    /*ABOUT*/
+    .gridPadreUno{
+        margin-bottom: 4%;
+        margin-left: 2%;
+        margin-right: 1%;
+        padding-bottom: 12%;
+    }
+    .gridHijoUno{
+        height: 100%;
+        width: 93%;
+        margin-left: 10%;
+        padding-top: 18%;
+    
+    } 
+    .gridHijoDos{
+        padding-top: 9%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 18px;
+        margin-left: 16%;
+        margin-right: 60%;
+        padding-top: 18%;
+    } 
+    .gridHijoTres{
+        font-size: 1em;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        margin-left: 16%;
+        font-size: 18px;   }
+    
+    
+    /*CURSOS*/
+    .gridPadreDos{
+        margin-bottom: 4%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-bottom: 12%;
+        background-color: #8b6a6211;}
+    
+    .gridHijo1{
+        width: 80%;
+        height: 70%;
+        margin-left: 10%;
+        padding-top:30%;} 
+
+    .gridHijo2{
+        padding-top: 9%;
+        padding-bottom: 1%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 16px;} 
+
+    .gridHijo3{
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 18px;
+        padding-top: 9%;
+        float: right;}
 
 
+    .gridPadreTres{
+        margin-bottom: 4%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-bottom: 12%;
+        background-color: #8b6a6211;}
+        
+    .gridHijo4{
+        width: 80%;
+        height: 70%;
+        margin-left: 110%;
+        margin-top: 26%;
+    }     
+    .gridHijo5{
+        padding-top: 9%;
+        margin-right: 50%;
+        padding-left: -10%;
+        padding-bottom: 1%;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 16px;} 
 
+    .gridHijo6{
+        padding-top: 9% !important;
+        margin-left: -10% !important;
+        margin-right: 40% !important;
+        color: $azul-color;
+        font-family:'Spectral', serif;
+        font-size: 18px;}
+
+    .textoCursos{
+        font-family:'Spectral', serif ;
+        font-size: 18px;
+        color: $marron-color;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        text-align: center;
+        padding: 2%;}
+}
 
 
 
